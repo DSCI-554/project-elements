@@ -4,14 +4,13 @@
 
 <!-- 🎒 Complete to include all the information requested. -->
 
-Team name:
+Team name: Elements
 
 Team members:
 
-- Tommy Trojan <tommy@usc.edu>
--
--
--
+- Aishwarya Krishnakumar <kris184@usc.edu>
+- Weidi Lou <wlou@usc.edu>
+- Zixin Zhang <zzhang09@usc.edu>
 
 ## Artifacts
 
