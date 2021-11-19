@@ -38,7 +38,8 @@ const routes = [
         path: '/map',
         name: 'maps',
         component: () => import('../views/Map.vue')
-      }
+      },
+      
     ]
   }
 ]
