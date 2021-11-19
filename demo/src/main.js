@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 import 'topojson/dist/topojson.min.js'
-import 'd3/dist/d3.min.js'
+import 'd3/dist/d3.min.js' 
 
 Vue.config.productionTip = false
 
