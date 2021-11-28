@@ -31,6 +31,8 @@
           <!-- </div> -->
           <b-container id='mbfm' class="mapbox_container">
             <!-- Content here -->
+            <div id='features'><h4>Flight Delay Info</h4><div id='pd'><p>Hover over a path!</p></div></div>
+
           </b-container>
         </b-tab>
       </b-tabs>
@@ -211,7 +213,25 @@ export default {
         for (let i = 0; i < stateData.length; i++) {
           var from = stateData[i].ORIGIN
           var to = stateData[i].DEST
-          // var del_t = stateData[i].ARR_DELAY
+          var cName = stateData[i].MKT_UNIQUE_CARRIER
+          var fNum = stateData[i].MKT_CARRIER_FL_NUM
+          var del_t = stateData[i].ARR_DELAY
+          var del_reason = []
+          if (stateData[i].CARRIER_DELAY != 0) {
+            del_reason.push(`Carrier: ${stateData[i].CARRIER_DELAY} mins`)
+          }
+          if (stateData[i].WEATHER_DELAY != 0) {
+            del_reason.push(`Weather: ${stateData[i].WEATHER_DELAY} mins`)
+          }
+          if (stateData[i].NAS_DELAY != 0) {
+            del_reason.push(`NAS: ${stateData[i].NAS_DELAY} mins`)
+          }
+          if (stateData[i].SECURITY_DELAY != 0) {
+            del_reason.push(`Security: ${stateData[i].SECURITY_DELAY} mins`)
+          }
+          if (stateData[i].LATE_AIRCRAFT_DELAY != 0) {
+            del_reason.push(`Aircraft: ${stateData[i].LATE_AIRCRAFT_DELAY} mins`)
+          }
           // var carrier = stateData[i].CARRIER_DELAY
           // var weather = stateData[i].WEATHER_DELAY
           // var nas = stateData[i].NAS_DELAY
@@ -224,12 +244,33 @@ export default {
           // const destination = [-77.032, 38.913];
 
           // A simple line from origin to destination.
-          var greatCircle = turf.greatCircle([from_lng, from_lat],[to_lng, to_lat], {properties: {name: 'CNM'}});
+          var greatCircle = turf.greatCircle([from_lng, from_lat],[to_lng, to_lat], {
+            properties: {'cName': cName,
+                         'fNum': fNum,
+                         'del_t': del_t,
+                         'del_r': del_reason.join(', ')
+                        }
+            });
           this.routes.features.push(greatCircle)
           
         }
       }
       this.map.getSource('route').setData(this.routes);
+      this.map.on('click', 'route', (d) => {
+        var path = document.getElementById('pd');
+        path.innerHTML = `<div>Flight: ${d.features[0].properties.cName} ${d.features[0].properties.fNum}</div>` + 
+                         `<div>Delay Time(mins): ${d.features[0].properties.del_t}</div>` +
+                         `<div>Reason: ${d.features[0].properties.del_r}</div>`
+      })
+      this.map.on('mouseenter', 'route', () => {
+        this.map.getCanvas().style.cursor = 'pointer';
+        });
+        
+        // Change the cursor back to a pointer
+        // when it leaves the states layer.
+      this.map.on('mouseleave', 'route', () => {
+        this.map.getCanvas().style.cursor = '';
+        });
     }
   },
   mounted: function () {
@@ -314,4 +355,20 @@ export default {
   height: 100%;
 }
 
+#features {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.7);
+  margin-right: 20px;
+  margin-left: 20px;
+  font-family: Arial, sans-serif;
+  overflow: auto;
+  border-radius: 3px;
+  right: 0;
+  height: 100px;
+  margin-top: 20px;
+  width: 300px;
+  z-index: 2;
+  padding-left: 20px;
+  text-anchor: middle;
+}
 </style>
