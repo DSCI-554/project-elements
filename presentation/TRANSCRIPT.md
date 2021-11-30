@@ -23,7 +23,7 @@ The  end  user  for  our  project  includes  current  and  future  passengers,  
 
 ## Slide 2
 
-We decided to split the work by section while also allowing each other to put a little time in each other's tasks. Aishwarya focused on creating the powerpoints and writing the paper. She also created an interactive donut/pie chart. Zixin focused her efforts on the line chart and the tree map. She also gave input for the powerpoints. Weidi created the d3 map and the mapbox map. The video was a group effort.
+We decided to split the work by section while also allowing each other to put a little time in each other's tasks. Aishwarya focused on creating the powerpoints and writing the paper. She also created an interactive donut/pie chart. Zixin focused her efforts on the line chart and the tree map. She also gave input for the powerpoints. Weidi created the d3 map and the mapbox map and contributed in writing about the maps. The video was a group effort.
 
 ## Slide 3
 
@@ -51,6 +51,8 @@ We wanted to create something that told a story about air travel delays. Our des
 ## Slide 7
 
 We optimized user interaction mostly on the maps. The user can click on a state to see the destinations that have had delayed flights on a certain date. Then, the user can hover over a path to see.... 
+
+We have two maps to show the details of each flight. One is the D3 map. By picking up the date, User can click on the state to show the delayed flights depart from it. When mouse move over the path, the delay information about the flight would be shown. The other one is the Mapbox map. This map asks users to input date and the airport code which they want to check. Then the map would plot the paths of flights. By clicking on one single path, the delay info would be shown on the page. Using two maps with similar function, because we want the map could be friendly to both PC and mobile end.
 
 ## Slide 8
 
