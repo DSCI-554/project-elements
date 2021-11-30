@@ -1,6 +1,5 @@
 <template>
     <div class="d3_map">
-      <h1>This is an Map page</h1>
       <b-tabs content-class="mt-3">
         <b-tab title="D3.map" active>
           <div>

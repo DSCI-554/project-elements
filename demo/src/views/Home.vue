@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <router-link to="/">MOTHER FUCKER</router-link>
+    <router-link to="/"></router-link>
     <img alt="Vue logo" src="../assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
