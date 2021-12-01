@@ -46,7 +46,7 @@ Visualizing Air Travel Delays the flight route. It does not provide any informat
 
 ## Slide 6
 
-We wanted to create something that told a story about air travel delays. Our design process was first sketching out a rough layout. We wanted to show the dates of most delays, states with most delays, air carriers with most delays, and finally reasons why flights are delayed. Then, we selected the types of graphs that would best fit what we wanted to show. We chose to represent the air carriers with a line graph. The states would be best with a tree map since it would be clearer than a line graph with 50 lines. Then, we chose to do a donut chart to show the reasons why flights are delayed.
+To tell a story about air travel delays, we first sketched out a rough layout to decide the topics including reasons why flights are delayed and dates, states as well as carriers with most delays. To best represent the information, we use an interative line graph to show carrier delays, a treemap to show states delays, a donut chart to show the delayed reasons and maps to show the flight routes. 
 
 ## Slide 7
 
