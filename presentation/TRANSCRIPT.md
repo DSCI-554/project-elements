@@ -57,6 +57,7 @@ We have two maps to show the details of each flight. One is the D3 map. By picki
 ## Slide 8
 
 (Explain what you have built with d3 and other tools including framework, and node, pythons tools, etc. you used.)
+We are using vue.js as the framework of the web application. BootstrapVue is also used for making the application responsive, mobile friendly. For plotting the beautiful curve of the flight path, we applied turf.js.
 
 ## Slide 9
 
