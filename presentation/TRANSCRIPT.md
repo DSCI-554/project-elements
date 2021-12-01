@@ -52,13 +52,10 @@ To tell a story about air travel delays, we first sketched out a rough layout to
 
 ## Slide 7
 
-We optimized user interaction mostly on the maps. The user can click on a state to see the destinations that have had delayed flights on a certain date. Then, the user can hover over a path to see.... 
-
-We have two maps to show the details of each flight. One is the D3 map. By picking up the date, User can click on the state to show the delayed flights depart from it. The flight paths are shown in different colors. Colors represent different delayed reasons.(When mouse move over the path, the delay information about the flight would be shown). The other one is the Mapbox map. This map asks users to input date and the airport code which they want to check. Then the map would plot the paths of flights. By clicking on one single path, the delay info would be shown on the page. Using two maps with similar function, because we want the map could be friendly to both PC and mobile end.
+We optimized user interaction mostly on the maps. The first one is a D3 map. By given date and state in America, the delayed flights depart from the state would be shown in colors. Different colors represent delayed reasons. The other map is Mapbox. With date and departure aiport code, the paths of delayed flights would be shown in a beatiful curve. Users can see detailed information of each flight by clicking on the path.
 
 ## Slide 8
 
-(Explain what you have built with d3 and other tools including framework, and node, pythons tools, etc. you used.)
 We are using vue.js as the framework of the web application. BootstrapVue is also used for making the application responsive, mobile friendly. For plotting the beautiful curve of the flight path, we applied turf.js.
 
 ## Slide 9
