@@ -52,7 +52,7 @@ To tell a story about air travel delays, we first sketched out a rough layout to
 
 ## Slide 7
 
-We optimized user interaction mostly on the maps. The first one is a D3 map. By given date and state in America, the delayed flights depart from the state would be shown in colors. Different colors represent delayed reasons. The other map is Mapbox. With date and departure aiport code, the paths of delayed flights would be shown in a beatiful curve. Users can see detailed information of each flight by clicking on the path.
+We optimized user interaction mostly on the maps. The first one is a D3 map. The delayed flights would be shown in colors. Different colors represent causes of delay. The other map is Mapbox. The paths of delayed flights would be shown in a beatiful curve. Users can see detailed information of each flight by clicking on the path.
 
 ## Slide 8
 
@@ -60,7 +60,7 @@ We are using vue.js as the framework of the web application. BootstrapVue is als
 
 ## Slide 9
 
-To expand on this project, we would add more dates instead of just one month. In addition, we would expand to international flights as well. About the functionality, we want to the infomation when user select one path, then make comparison between the saved flight information
+To expand on this project, we would add more dates instead of just one month. In addition, we would expand to international flights as well. About the functionality, we want to save the infomation when user select one path, then make comparison between the saved flight information
 
 ## Slide 10
 Thank you for listening.
