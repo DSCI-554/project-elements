@@ -63,7 +63,7 @@ We are using vue.js as the framework of the web application. BootstrapVue is als
 
 ## Slide 9
 
-To expand on this project, we would add more dates instead of just one month. In addition, we would expand to international flights as well. This would mean our dataset would expand tremendously.
+To expand on this project, we would add more dates instead of just one month. In addition, we would expand to international flights as well. About the functionality, we want to the infomation when user select one path, then make comparison between the saved flight information
 
 ## Slide 10
 Thank you for listening.
