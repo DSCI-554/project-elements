@@ -37,7 +37,7 @@ Similar works have been done by the flight tracking application, FlightAware. Fl
 
 ## Slide 5
 
-The most unqiue point about our project is that we focus on analyzing information about delayed flights using various charts. We extended based on the website是mentioned earlier with visualizations on general airport conditions, and added delayed flight routes that shows detailed information when hovered over on maps. 
+The most unqiue point about our project is that we focus on analyzing information about delayed flights using various charts. We extended based on the websites mentioned earlier with visualizations on general airport conditions, and added delayed flight routes that shows detailed information when hovered over on maps. 
 
 ## Slide 6
 
