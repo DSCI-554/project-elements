@@ -52,7 +52,7 @@ We wanted to create something that told a story about air travel delays. Our des
 
 We optimized user interaction mostly on the maps. The user can click on a state to see the destinations that have had delayed flights on a certain date. Then, the user can hover over a path to see.... 
 
-We have two maps to show the details of each flight. One is the D3 map. By picking up the date, User can click on the state to show the delayed flights depart from it. When mouse move over the path, the delay information about the flight would be shown. The other one is the Mapbox map. This map asks users to input date and the airport code which they want to check. Then the map would plot the paths of flights. By clicking on one single path, the delay info would be shown on the page. Using two maps with similar function, because we want the map could be friendly to both PC and mobile end.
+We have two maps to show the details of each flight. One is the D3 map. By picking up the date, User can click on the state to show the delayed flights depart from it. The flight paths are shown in different colors. Colors represent different delayed reasons.(When mouse move over the path, the delay information about the flight would be shown). The other one is the Mapbox map. This map asks users to input date and the airport code which they want to check. Then the map would plot the paths of flights. By clicking on one single path, the delay info would be shown on the page. Using two maps with similar function, because we want the map could be friendly to both PC and mobile end.
 
 ## Slide 8
 
