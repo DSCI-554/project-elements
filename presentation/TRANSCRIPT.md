@@ -14,10 +14,10 @@ Team members:
 
 ## Slide 0
 
-Hi, I'm Aishwarya, I'm Weidi, and I'm Zixin and our team name is the Elements. We chose to do our project on air travel delays.
+Hi, I'm Aishwarya, my team members are Weidi and Zixin and our team name is the Elements. We chose to do our project on air travel delays.
 
 ## Slide 1
-We chose to do our final project on air travel since it’s widely used by people around the country, especially us college students. Our goal was to create a visualization  to  present  data  about  flight  delays,  primarily  domestic.  By  creating  a dashboard, the users will be able to understand the reasons why flights are delayed, which airports around the country deal with the most delays, which travel dates see the most delays, and which airlines experience the most departure delays.
+We chose to do our final project on air travel since it’s widely used by people around the country, especially us college students. Our goal was to create a dashboard that allows the users will be able to understand the reasons why flights are delayed, which airports around the country deal with the most delays, which travel dates see the most delays, and which airlines experience the most departure delays.
 
 The  end  user  for  our  project  includes  current  and  future  passengers,  airport and airline employees  who  are  interested  in  learning  about  flight delays. Our project was inspired by many of our own travel journeys and our own experiences with delayed flights
 
