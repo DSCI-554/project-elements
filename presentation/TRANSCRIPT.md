@@ -27,9 +27,9 @@ We decided to split the work by section while also allowing each other to put a 
 
 ## Slide 3
 
-Our project’s dataset is from the United States Bureau of Transportation.The data on this website allowed us to filter based on carrier, airport, and date.
+Our project’s dataset is from the US Bureau of Transportation.The data on this website allowed us to filter based on carrier, airport, and date.
 
-Another dataset we used was from the Humanitarian Data Exchange. This data had the local code, longitude, and latitude of the airports. This dataset had 27,917 rows of data. This dataset was necessary since our initial dataset did not have the physical locations of the airports.
+Another dataset we used was from the Humanitarian Data Exchange. This data had the local code, longitude, and latitude of the airports. This dataset was necessary since our initial dataset did not have the physical locations of the airports.
 
 ## Slide 4
 
