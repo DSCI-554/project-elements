@@ -37,10 +37,7 @@ Similar works have been done by the flight tracking application, FlightAware. Fl
 
 ## Slide 5
 
-Similar works have been done by the Federal Aviation Administration and by theflight tracking application, FlightAware. We decided to model our map based onthe visualizations in FlightAware. However, the map in FlightAware only shows
-Visualizing Air Travel Delays the flight route. It does not provide any information about delayed flight routes. Therefore, in our project, we decided to create a map that shows delayed flightroutes. The  Federal  Aviation  Administration  has  a  website  which  contains  some visualization about general airport conditions. For those specific flight requests,it provides the link to airline. In our project, we provide additional information about  a  certain  delayed  flight  when  the  route  is  hovered  over.  Although  our contributions to this project are inspired by existing work such as FlightAware,we have made it unique as we focus our information on delayed flights
-
-The most unqiue point about our project is that unlike previous works we focus on analyzing information about delayed flights using various charts. We extended based on the website of federal aviation administration that contains visualizations about general airport condiions, and added delayed flight routes that shows detailed information when hovered over on maps. 
+The most unqiue point about our project is that we focus on analyzing information about delayed flights using various charts. We extended based on the website是mentioned earlier with visualizations on general airport conditions, and added delayed flight routes that shows detailed information when hovered over on maps. 
 
 ## Slide 6
 
