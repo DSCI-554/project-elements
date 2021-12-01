@@ -19,7 +19,7 @@ Hi, I'm Aishwarya, my team members are Weidi and Zixin and our team name is the 
 ## Slide 1
 We chose to do our final project on air travel since it’s widely used by people around the country, especially us college students. Our goal was to create a dashboard that allows the users will be able to understand the reasons why flights are delayed, which airports around the country deal with the most delays, which travel dates see the most delays, and which airlines experience the most departure delays.
 
-The  end  user  for  our  project  includes  current  and  future  passengers,  airport and airline employees  who  are  interested  in  learning  about  flight delays. Our project was inspired by many of our own travel journeys and our own experiences with delayed flights
+The  end  user  for  our  project  includes  passengers and aviation employees  who  are  interested  in  learning  about  flight delays.
 
 ## Slide 2
 
@@ -29,15 +29,11 @@ We decided to split the work by section while also allowing each other to put a 
 
 Our project’s dataset is from the United States Bureau of Transportation.The data on this website allowed us to filter based on carrier, airport, and date.
 
-We ended up choosing all carriers, all major airports, and the dates of August 2021. We then downloaded the data as a csv file. 
-
-In total, we had 81,779 rows of data. This dataset includes flight date, airline identification codes, individual flight numbers, origin airport, destination airport, departure time, arrival time, and delay times. The dataset categorizes the causes of delays in five expansive categories: Air Carrier, Weather, National Aviation System (NAS), Security, andLate-Arriving  Aircraft.  These  categories  encompass  all  possible  reasons  for  aflight to be delayed. Another dataset we used was from the Humanitarian Data Exchange. This data had the local code, longitude, and latitude of the airports. This dataset had 27,917 rows of data. This dataset was necessary since our initial dataset did not have the physical locations of the airports.
+Another dataset we used was from the Humanitarian Data Exchange. This data had the local code, longitude, and latitude of the airports. This dataset had 27,917 rows of data. This dataset was necessary since our initial dataset did not have the physical locations of the airports.
 
 ## Slide 4
 
-Similar works of the same topic have been done by the Federal Aviation Administration and by the flight tracking application, FlightAware. The Federal Aviation Administration has a website which contains some visualization about general airport conditions. For those specific flight requests, it provides the link to airline.FlightAware has a real-time worldwide flight traffic visualization on the map.It  also  includes  some  other  visualizations  about  data  trend  such  as  airplane velocity  and  elapsed  flight  time.  FlightAware’s  map,  however,  only  shows  the flight route and does not provide any information about delayed flight routes.
-
-Similar works have been done in other areas by the Metropolitan Transportation Authority and the California Highway Patrol. The Metropolitan Trans-portation Authority has an online dashboard that tracks subway performance in the state of New York. This is similar to our project because it provides a barchart of performance over time.The California Highway Patrol maintains a dashboard to track where theyhave conducted stops throughout the state of California. This work is similar toour project in the sense that both include interactive maps with tooltips.
+Similar works have been done by the flight tracking application, FlightAware. FlightAware has a real-time worldwide flight traffic visualization on the map. It  also  includes  some  other  visualizations  about  data  trend  such  as  airplane velocity  and  elapsed  flight  time.  FlightAware’s  map,  however,  only  shows  the flight route and does not provide any information about delayed flight routes.
 
 ## Slide 5
 
