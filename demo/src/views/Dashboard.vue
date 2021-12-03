@@ -2,8 +2,8 @@
     <div class="about">
     <b-tabs content-class="mt-3">
         <b-tab title="Carrier Analysis" active>
-            <h1>Interactive & Animated Line Chart</h1>
-            <div class="title"> Number Of Delayed Flight Count For Carriers Through Time</div>
+            <h1>Which carriers have more delay?</h1>
+            <div class="title">Interactive & Animated Line Chart: Number Of Delayed Flight Count For Carriers Through Time</div>
             <br />
             <label class="guideline">
               Show Guideline & Curtain
@@ -14,8 +14,8 @@
         </b-tab>
 
         <b-tab title="States Analysis">
-            <h1>D3 Animated Treemap</h1>
-            <div class="title"> Number Of Delayed Flight Count For Carriers Through Time</div>
+            <h1>What is proportion of the delayed flight count for each state?</h1>
+            <div class="title"> Treemap: Number Of Delayed Flight Count of Each State with Comparsion on Weekend and Weekday</div>
             <label class="selection"><input type="radio" name="mode" value="sumBySat" checked> Weekend</label>
             &nbsp;&nbsp;&nbsp;&nbsp;
             <label class="selection"><input type="radio" name="mode" value="sumByWed"> Weekday</label>
@@ -25,7 +25,7 @@
 
         <b-tab title="Reasons Analysis">
             <h1>What are the reasons a flight gets delayed?</h1>
-            <div class="title"> Percentage of Each Delayed Reasons Shown in Donut Chart</div>
+            <div class="title"> Donut Chart: Percentage of Each Delayed Reasons</div>
             <br/>
             <svg width="600" height="600" id="pie_chart"></svg>
         </b-tab>
