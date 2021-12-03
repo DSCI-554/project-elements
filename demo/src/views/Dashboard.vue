@@ -10,8 +10,8 @@
             <!-- Element to collapse -->
             <b-collapse visible id="collapse-2">
               <b-card>
-                The Line chart shows the number of delayed flight on each day in August 2020. <br> 
-                It'll show carrier name when hovered over on lines. <br>
+                The Line chart shows the number of delayed flights on each day in August 2020. <br> 
+                It'll show the carrier name when hovered over on lines. <br>
                 When "Show Guideline & Curtain" is checked during the initial animation, <br>
                 the progress of line drawing will show. <br> 
                 For explanation of this page, please click the <code>Explanation</code> button
@@ -19,10 +19,10 @@
             </b-collapse>
             <b-collapse id="collapse-1">
               <b-card>
-                Through out time, Carrier AA has the most delayed flight count, and Carrier HA has the least. <br>
+                Throughout time, Carrier AA has the most delayed flight count, and Carrier HA has the least. <br>
                 However, major carriers do have more flights on each day to begin with,<br>
-                which directly increase the delayed flight count.<br>
-                This phenomenon can be observed by the gap (between 200~300 in y-axis) in line chart between carriers, <br>
+                which directly increases the delayed flight count.<br>
+                This phenomenon can be observed by the gap (between 200~300 in y-axis) in the line chart between carriers, <br>
                 where the 4 major carriers AA, UA, WN, and DL are above the gap while the rest is below.
               </b-card>
             </b-collapse>
@@ -47,7 +47,7 @@
           <!-- Element to collapse -->
           <b-collapse visible id="collapse-3">
             <b-card>
-              The treemap shows the count of delayed flight on each state in the U.S..<br>
+              The treemap shows the count of delayed flights on each state in the U.S..<br>
               Select "Weekday" to see data on a typical weekday, and "Weekend" for a typical weekend data. <br>
               Mouse over each state to check the details. <br>
               For explanation of this page, please click the <code>Explanation</code> button
@@ -57,7 +57,7 @@
             <b-card>
               The states are sorted and colored by their geographical division. <br>
               The detailed information of each state can be found when you put mouse on each state,<br>
-              including their geographical division, state name, and exact count of delayed flight.<br>
+              including their geographical division, state name, and exact count of delayed flights.<br>
               One key advantage of treemap is that it can show the proportion of delayed flight directly through the size of each cell.<br>
               Larger cells contain more flight delays.
             </b-card>
@@ -80,16 +80,16 @@
             <!-- Element to collapse -->
             <b-collapse visible id="collapse-6">
               <b-card>
-                Hover over each section to see the percentage value of each delay reason.
+                Hover over each section to see the percentage value of each delay reason. <br>
                 For explanation of this page, please click the <code>Explanation</code> button
               </b-card>
             </b-collapse>
             <b-collapse id="collapse-5">
               <b-card>
-                The most frequent reason of flight delay is Air Carrier Delay(38%), <br>
+                The most frequent reason for flight delay is Air Carrier Delay(38%), <br>
                 followed by delays caused by Aircraft Arriving Late (34%). <br>
                 Delays caused by Security reason is the least. <br>
-                Surprisingly, delays caused by weather is only 5%.
+                Surprisingly, delays caused by weather are only 5%.
               </b-card>
             </b-collapse>
 
