@@ -27,7 +27,9 @@ export default {
 }
 </script>
 <style>
-
+.navbar-brand{
+  margin-left: 20px;
+}
 
 
 </style>
