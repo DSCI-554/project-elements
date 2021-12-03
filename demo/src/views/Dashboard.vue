@@ -7,7 +7,7 @@
             <br />
             <label class="guideline">
               Show Guideline & Curtain
-              <input type="checkbox" id="show_guideline" />
+              <input type="checkbox" id="show_guideline"/>
             </label>
             <br />
             <svg width="1200" height="600" id="line_chart"></svg>
@@ -16,7 +16,11 @@
         <b-tab title="States Analysis">
             <h1>D3 Animated Treemap</h1>
             <div class="title"> Number Of Delayed Flight Count For Carriers Through Time</div>
-            <svg width="954" height="954" id="treemap"></svg>
+            <label class="selection"><input type="radio" name="mode" value="sumBySat" checked> Weekend</label>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <label class="selection"><input type="radio" name="mode" value="sumByWed"> Weekday</label>
+            <br />
+            <svg width="960" height="960" id="treemap"></svg>
         </b-tab>
 
         <b-tab title="Reasons Analysis">
@@ -46,50 +50,8 @@ export default {
     }
   },
   methods: {
-    chart(){
-
-      var width = 800;
-      var height = 600;
-      var margin = 50;
-      var xScale = d3.scaleLinear()
-                .domain([0,2021])
-                .range([0, width]);
-
-      var yScale = d3.scaleLinear()
-                .domain([0, 1000])
-                .range([height, 0]);
-
-      var svg = d3.select("#line_chart")
-              .append("svg")
-              .attr("width", width+margin)
-              .attr("height", height+margin)
-              .append('g')
-              .attr("transform", `translate(${margin}, ${margin})`);
-              
-      var xAxis = d3.axisBottom(xScale).ticks(5);
-      var yAxis = d3.axisLeft(yScale).ticks(5);
-
-      svg.append("g")
-        .attr("class", "x axis")
-        .attr("transform", `translate(0, ${height-margin})`)
-        .call(xAxis)
-        .text("Year");
-        
-        svg.append("g")
-        .attr("class", "y axis")
-        .call(yAxis)
-        .append('text')
-        .attr("y", 15)
-        .attr("transform", "rotate(-90)")
-        .attr("fill", "#000")
-        .text("Number of Delayed Flights");
-    },
     buildLineChart() {
-      /*var width = 800;
-      var height = 800;
-      var margin = 50;
-      var duration = 250;
-      */
+
       var lineOpacity = "0.25";
       var lineOpacityHover = "0.85";
       var otherLinesOpacityHover = "0.25";
@@ -258,146 +220,145 @@ export default {
         })                              
     },
     buildTreemap() {
-      var width = 954;
-      var height = 954;
+      var width = 960;
+      var height = 960;
+      var margin = {top: 10, right: 10, bottom: 10, left: 10}
 
       const keys = d3.range(1, 32);
-      //console.log(keys)
-      //console.log(this.treemapData)
+      console.log(keys)
+      console.log(this.treemapData)
 
       var data = this.treemapData;
 
       data.forEach(function(d) { 
         d.name = d.ORIGIN_STATE_NM
-        d.values =  keys.map(key => +d[key].replace(/,/g, ""))
+        d.Sat =  +d["1"]
+        d.Sun = +d["2"]
+        d.Mon = +d["3"]
+        d.Tue = +d["4"]
+        d.Wed = +d["5"]
+        d.Thu = +d["6"]
+        d.Fri = +d["7"]
+
       });
-      //console.log(data)
+      console.log(data)
       
       const regionByState = new Map(this.region.map(d => [d.State, d.Region]));
-      //console.log(regionByState)
+      console.log(regionByState)
       const divisionByState = new Map(this.region.map(d => [d.State, d.Division]));
-      //console.log(divisionByState)
+      console.log(divisionByState)
 
-      const group = d3.group(data, d => regionByState.get(d.ORIGIN_STATE_NM), d => divisionByState.get(d.ORIGIN_STATE_NM))
-      //console.log(group)
+      const group = d3.group(data, d => regionByState.get(d.ORIGIN_STATE_NM), d => divisionByState.get(d.ORIGIN_STATE_NM)) //
+      console.log(group)
 
       var color = d3.scaleOrdinal(group.keys(), d3.schemeCategory10.map(d => d3.interpolateRgb(d, "white")(0.5)))
-      //console.log(color)
-
-      var sums = keys.map((d, i) => d3.hierarchy(group).sum(d => d.values[i]).value);
-      //console.log(sums)
-
-      var max = d3.max(sums);
-      //console.log(max)
-
-      const treemap = d3.treemap()
-      .tile(d3.treemapResquarify)
-      .size([width, height])
-      .padding(d => d.height === 1 ? 1 : 0)
-      .round(true);
-
-      //console.log(treemap)
-
-      const root = treemap(d3.hierarchy(group)
-        .sum(d => Array.isArray(d.values) ? d3.sum(d.values) : 0)
-        .sort((a, b) => b.value - a.value));
-      //console.log(root)
+      console.log(color)
     
 
     var svg = d3.select("#treemap")
         .append("svg")
-        .attr("font-family", "sans-serif")
-        .attr("font-size", 10)
-        .style("overflow", "visible");
+          .attr("width", width + margin.left + margin.right)
+          .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+          .attr("transform",
+                "translate(" + margin.left + "," + margin.top + ")");
 
-    var formatNumber = d3.format(",d");
-    var duration = 2500;
-    var parseNumber = string => +string.replace(/,/g, "");
 
-    var box = svg.append("g")
-    .selectAll("g")
-    .data(keys.map((key, i) => {
-      const value = root.sum(d => d.values[i]).value;
-      return {key, value, i, k: Math.sqrt(value / max)};
-    }).reverse())
-    .join("g")
-      .attr("transform", ({k}) => `translate(${(1 - k) / 2 * width},${(1 - k) / 2 * height})`)
-      .call(g => g.append("text")
-          .attr("y", -6)
-          .attr("fill", "#777")
-        .selectAll("tspan")
-        .data(({key, value}) => [key, ` ${formatNumber(value)}`])
-        .join("tspan")
-          .attr("font-weight", (d, i) => i === 0 ? "bold" : null)
-          .text(d => d))
-      .call(g => g.append("rect")
-          .attr("fill", "none")
-          .attr("stroke", "#ccc")
-          .attr("width", ({k}) => k * width )
-          .attr("height", ({k}) => k * height));
-      
-      //console.log(box)
+      console.log(svg)
 
-       const leaf = svg.append("g")
-          .selectAll("g")
-          .data(layout(keys))
-          .join("g")
-            .attr("transform", d => `translate(${d.x0},${d.y0})`);
-        //console.log(leaf)
-        
-        leaf.append("rect")
-            //.attr("id", d => (d.leafUid = DOM.uid("leaf")).id)
-            .attr("fill", d => { while (d.depth > 1) d = d.parent; return color(keys); })
-            .attr("width", d => d.x1 - d.x0)
-            .attr("height", d => d.y1 - d.y0);
-        /*
-        leaf.append("clipPath")
-            .attr("id", d => (d.clipUid = DOM.uid("clip")).id)
-          .append("use")
-            .attr("xlink:href", d => d.leafUid.href);
-        */
-        leaf.append("text")
-            .attr("clip-path", d => d.clipUid)
-          .selectAll("tspan")
-          .data([group.name, formatNumber(group.value)])
-          .join("tspan")
-            .attr("x", 3)
-            .attr("y", (d, i, nodes) => `${(i === nodes.length - 1) * 0.3 + 1.1 + i * 0.9}em`)
-            .attr("fill-opacity", (d, i, nodes) => i === nodes.length - 1 ? 0.7 : null)
-            .text(d => d);
+    var format = d3.format(",d");
 
-        leaf.append("title")
-            .text(group.name);
+    var treemap = d3.treemap()
+        .tile(d3.treemapResquarify)
+        .size([width, height])
+        .round(true)
+        .paddingInner(1);
 
-        function layout(index) {
-          const k = Math.sqrt(root.sum(d => d.values[index]).value / max);
-          const x = (1 - k) / 2 * width;
-          const y = (1 - k) / 2 * height;
-          return treemap.size([width * k, height * k])(root)
-            .each(d => (d.x0 += x, d.x1 += x, d.y0 += y, d.y1 += y))
-            .leaves();
-        }
+  var root = d3.hierarchy(group)
+      .eachBefore(function(d) { d.data.id = (d.parent ? d.parent.data.id + "." : "") + d.data.name; })
+      .sum(sumBySat)
+      .sort(function(a, b) { return b.height - a.height || b.value - a.value; });
+    console.log(root)
+  treemap(root);
 
-  return Object.assign(svg.node(), {
-    update(index) {
-      box.transition()
-          .duration(duration)
-          .attr("opacity", ({i}) => i >= index ? 1 : 0);
+  var cell = svg.selectAll("g")
+    .data(root.leaves())
+    .enter().append("g")
+      .attr("transform", function(d) { return "translate(" + d.x0 + "," + d.y0 + ")"; });
 
-      leaf.data(layout(index)).transition()
-          .duration(duration)
-          .ease(d3.easeLinear)
-          .attr("transform", d => `translate(${d.x0},${d.y0})`)
-          .call(leaf => leaf.select("rect")
-              .attr("width", d => d.x1 - d.x0)
-              .attr("height", d => d.y1 - d.y0))
-          .call(leaf => leaf.select("text tspan:last-child")
-              .tween("text", function(d) {
-                const i = d3.interpolate(parseNumber(this.textContent), d.value);
-                return function(t) { this.textContent = formatNumber(i(t)); };
-              }));
-    }
-  });
+  cell.append("rect")
+      .attr("id", function(d) {  return d.data.id; })
+      .attr("width", function(d) { return d.x1 - d.x0; })
+      .attr("height", function(d) { return d.y1 - d.y0; })
+      .attr("fill", function(d) {return color(d.parent.data[0]); });
+
+  cell.append("clipPath")
+      .attr("id", function(d) { return "clip-" + d.data.id; })
+    .append("use")
+      .attr("xlink:href", function(d) { return "#" + d.data.id; });
+
+  cell.append("text")
+      .attr("clip-path", function(d) { return "url(#clip-" + d.data.id + ")"; })
+    .selectAll("tspan")
+      .data(function(d) { return d.data.name.split(/(?=[A-Z][^A-Z])/g)})
+    .enter().append("tspan")
+      .attr("x", 4)
+      .attr("y", function(d, i) { return 13 + i * 10; })
+      .text(function(d) { return d; });
+
+  cell.append("title")
+      .text(function(d) { return "Geographical Division: " + d.parent.data[0] + "\n" + "State Name: " + d.data.name + "\n" + "Delayed Flight Count: " +format(d.value); });
+
+  
+  var f_selected = d3.selectAll('input[type="radio"]').node().value;
+  console.log(f_selected)
+  
+  d3.selectAll('input[type="radio"]')
+    .on("change", changed)
+
+  
+  /*
+function change_f(){
+    var t = (this.value == "sumBySat") ? sumBySat :sumByWed
+    console.log(t);
+    return t
+  }
+  d3.selectAll('input[type="radio"]')
+      .data([sumBySat, sumByWed], function(d) { 
+                        return d ? d.name : this.value; })
+      .on("change", changed);*/
+
+  var timeout = d3.timeout(function() {
+    d3.select('input[value="sumByWed"]')
+        .property("checked", true)
+        .dispatch("change");
+  }, 2000);
+
+  
+  function changed() {
+    timeout.stop();
+
+    var t = (this.value == "sumBySat") ? sumBySat :sumByWed
+    console.log(t)
+    treemap(root.sum(t));
+
+    cell.transition()
+        .duration(750)
+        .attr("transform", function(d) { return "translate(" + d.x0 + "," + d.y0 + ")"; })
+      .select("rect")
+        .attr("width", function(d) { return d.x1 - d.x0; })
+        .attr("height", function(d) { return d.y1 - d.y0; });
+  }
+  
+
+function sumByWed(d) {
+  return d.Wed;
+}
+
+function sumBySat(d) {
+  return d.Sat;
+}
+
 
     },
     buildPieChart(){
@@ -514,8 +475,9 @@ export default {
     if (!this.$store.state.htmlMapData) {
       var promises = []
       promises.push(d3.csv('Data_for_line_chart.csv'))
-      promises.push(d3.csv('us-region.csv'))
+      promises.push(d3.csv('us_region.csv'))
       promises.push(d3.csv('Data_for_treemap.csv'))
+      //promises.push(d3.csv('test_data.json'))
       promises.push(d3.csv('delay.csv'))
       Promise.all(promises).then(values => {
         this.rawData = values
@@ -524,9 +486,8 @@ export default {
         this.treemapData = values[2]
         this.pieData = values[3]
         this.$store.commit('htmlMapData', this.rawData);
-        //this.chart();
         this.buildLineChart();
-        //this.buildTreemap();
+        this.buildTreemap();
         this.buildPieChart();
       })
     } else {
@@ -534,9 +495,8 @@ export default {
       this.lineData = this.rawData[0]
       this.region = this.rawData[1]
       this.treemapData = this.rawData[2]
-      this.chart();
       this.buildLineChart();
-      //this.buildTreemap();
+      this.buildTreemap();
       this.buildPieChart();
     }
 
