@@ -26,6 +26,7 @@ Team members:
 ## Project Summary
 
 <!-- 🎒 Add a project summary here in 250 words or less. -->
+Our final project is on air travel as it is widely used by people around the country, especially us college students. We created a dashboard to present data about flight delays, primarily domestic. The dashboard allows users to understand the reasons why flights are delayed, which airports around the country deal with the most delays, which travel dates see the most delays, and which airlines have the most delays. To best represent the information, we decided to create an interactive line graph to show carrier delays, a donut chart to show the reasons why flights are delayed, two USA maps (d3 and mapbox) to show the delayed flight routes, and a tree map to show location by state of most delays. 
 
 ## Contributions
 
@@ -33,35 +34,54 @@ Team members:
 
 ## Proposal presentation
 
-[Tommy Trojan](mailto:tommy@usc.edu)
+[Aishwarya Krishnakumar](mailto:kris184@usc.edu)
+- Worked on creating powerpoint through Google Drive
 
--
--
--
+[Weidi Lou](mailto:wlou@usc.edu)
+- Worked on creating powerpoint through Google Drive
+
+[Zixin Zhang](mailto:zzhang09@usc.edu)
+- Worked on creating powerpoint through Google Drive
 
 ## Final presentation
 
-[Tommy Trojan](mailto:tommy@usc.edu)
+[Aishwarya Krishnakumar](mailto:kris184@usc.edu)
+- Worked on creating slides through Sozi and Inkscape
+- Wrote transcript
+- Presented slides 0-6
 
--
--
--
+[Weidi Lou](mailto:wlou@usc.edu)
+- Gave input on what information to add to transcript
+- Presented slides 7-10
+
+[Zixin Zhang](mailto:zzhang09@usc.edu)
+- Gave input on what images to add to slides
+- Wrote transcript
 
 ## Paper
 
-[Tommy Trojan](mailto:tommy@usc.edu)
+[Aishwarya Krishnakumar](mailto:kris184@usc.edu)
+- Worked on writing paper through Overleaf
+- Researched about our topic on other websites, projects, and articles
 
--
--
--
+[Weidi Lou](mailto:wlou@usc.edu)
+- Gave input on what information to add to paper
+- Proofread and edited paper
+
+[Zixin Zhang](mailto:zzhang09@usc.edu)
+- Gave input on what information to add to paper
+- Proofread and edited paper
 
 ## Demo
 
-[Tommy Trojan](mailto:tommy@usc.edu)
+[Aishwarya Krishnakumar](mailto:kris184@usc.edu)
+- Created interactive donut chart
 
--
--
--
+[Weidi Lou](mailto:wlou@usc.edu)
+- Created d3 and mapbox maps
+
+[Zixin Zhang](mailto:zzhang09@usc.edu)
+- Created line graph and tree map
 
 # Visualizations created in the Demo
 
