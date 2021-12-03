@@ -1,7 +1,32 @@
 <template>
     <div class="about">
     <b-tabs content-class="mt-3">
-        <b-tab title="Carrier Analysis" active>
+        <b-tab title="Analysis on Carriers" active>
+          <b-button v-b-toggle.collapse-2 class="m-1">Instruction</b-button>
+
+            <!-- Using value -->
+            <b-button v-b-toggle="'collapse-1'" class="m-1">Explanation</b-button>
+
+            <!-- Element to collapse -->
+            <b-collapse visible id="collapse-2">
+              <b-card>
+                The Line chart shows the number of delayed flight on each day in August 2020. <br> 
+                It'll show carrier name when hovered over on lines. <br>
+                When "Show Guideline & Curtain" is checked during the initial animation, <br>
+                the progress of line drawing will show. <br> 
+                For explanation of this page, please click the <code>Explanation</code> button
+              </b-card>
+            </b-collapse>
+            <b-collapse id="collapse-1">
+              <b-card>
+                Through out time, Carrier AA has the most delayed flight count, and Carrier HA has the least. <br>
+                However, major carriers do have more flights on each day to begin with,<br>
+                which directly increase the delayed flight count.<br>
+                This phenomenon can be observed by the gap (between 200~300 in y-axis) in line chart between carriers, <br>
+                where the 4 major carriers AA, UA, WN, and DL are above the gap while the rest is below.
+              </b-card>
+            </b-collapse>
+
             <h1>Which carriers have more delay?</h1>
             <div class="title">Interactive & Animated Line Chart: Number Of Delayed Flight Count For Carriers Through Time</div>
             <br />
@@ -13,7 +38,30 @@
             <svg width="1200" height="600" id="line_chart"></svg>
         </b-tab>
 
-        <b-tab title="States Analysis">
+        <b-tab title="Analysis on States">
+          <b-button v-b-toggle.collapse-3 class="m-1">Instruction</b-button>
+
+          <!-- Using value -->
+          <b-button v-b-toggle="'collapse-4'" class="m-1">Explanation</b-button>
+
+          <!-- Element to collapse -->
+          <b-collapse visible id="collapse-3">
+            <b-card>
+              The treemap shows the count of delayed flight on each state in the U.S..<br>
+              Select "Weekday" to see data on a typical weekday, and "Weekend" for a typical weekend data. <br>
+              Mouse over each state to check the details. <br>
+              For explanation of this page, please click the <code>Explanation</code> button
+            </b-card>
+          </b-collapse>
+          <b-collapse id="collapse-4">
+            <b-card>
+              The states are sorted and colored by their geographical division. <br>
+              The detailed information of each state can be found when you put mouse on each state,<br>
+              including their geographical division, state name, and exact count of delayed flight.<br>
+              One key advantage of treemap is that it can show the proportion of delayed flight directly through the size of each cell.<br>
+              Larger cells contain more flight delays.
+            </b-card>
+          </b-collapse>
             <h1>What is proportion of the delayed flight count for each state?</h1>
             <div class="title"> Treemap: Number Of Delayed Flight Count of Each State with Comparsion on Weekend and Weekday</div>
             <label class="selection"><input type="radio" name="mode" value="sumBySat" checked> Weekend</label>
@@ -23,7 +71,28 @@
             <svg width="960" height="960" id="treemap"></svg>
         </b-tab>
 
-        <b-tab title="Reasons Analysis">
+        <b-tab title="Analysis on Reasons">
+          <b-button v-b-toggle.collapse-6 class="m-1">Instruction</b-button>
+
+            <!-- Using value -->
+            <b-button v-b-toggle="'collapse-5'" class="m-1">Explanation</b-button>
+
+            <!-- Element to collapse -->
+            <b-collapse visible id="collapse-6">
+              <b-card>
+                Hover over each section to see the percentage value of each delay reason.
+                For explanation of this page, please click the <code>Explanation</code> button
+              </b-card>
+            </b-collapse>
+            <b-collapse id="collapse-5">
+              <b-card>
+                The most frequent reason of flight delay is Air Carrier Delay(38%), <br>
+                followed by delays caused by Aircraft Arriving Late (34%). <br>
+                Delays caused by Security reason is the least. <br>
+                Surprisingly, delays caused by weather is only 5%.
+              </b-card>
+            </b-collapse>
+
             <h1>What are the reasons a flight gets delayed?</h1>
             <div class="title"> Donut Chart: Percentage of Each Delayed Reasons</div>
             <br/>
