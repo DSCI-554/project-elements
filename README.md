@@ -43,7 +43,7 @@ Our final project is on air travel as it is widely used by people around the cou
 [Zixin Zhang](mailto:zzhang09@usc.edu)
 - Worked on creating powerpoint through Google Drive
 
-## Final presentation
+## Final presentation and video
 
 [Aishwarya Krishnakumar](mailto:kris184@usc.edu)
 - Worked on creating slides through Sozi and Inkscape
@@ -53,10 +53,12 @@ Our final project is on air travel as it is widely used by people around the cou
 [Weidi Lou](mailto:wlou@usc.edu)
 - Gave input on what information to add to transcript
 - Presented slides 7-10
+- Recorded the map part for video
 
 [Zixin Zhang](mailto:zzhang09@usc.edu)
 - Gave input on what images to add to slides
 - Wrote transcript
+- Recorded the intro and dashboard part for the video
 
 ## Paper
 
