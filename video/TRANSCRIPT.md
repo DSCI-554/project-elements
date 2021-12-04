@@ -14,8 +14,9 @@ Team members:
 
 ## Introduction (0-30s)
 
-- 
+Hello everyone, we are team Elements and our project topic is visualizing air travel delays. Our goal is to 
 
 ## Dashboard Page (2 mins)
+
 
 ## Maps Page (2 mins)
