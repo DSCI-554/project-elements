@@ -27,7 +27,7 @@
               </b-card>
             </b-collapse>
 
-            <h1>Which carriers have more delay?</h1>
+            <h1>Which carriers have more delays?</h1>
             <div class="title">Interactive & Animated Line Chart: Number Of Delayed Flight Count For Carriers Through Time</div>
             <br />
             <label class="guideline">
@@ -62,8 +62,8 @@
               Larger cells contain more flight delays.
             </b-card>
           </b-collapse>
-            <h1>What is proportion of the delayed flight count for each state?</h1>
-            <div class="title"> Treemap: Number Of Delayed Flight Count of Each State with Comparsion on Weekend and Weekday</div>
+            <h1>What is the proportion of the delayed flight count for each state?</h1>
+            <div class="title"> Treemap: Number Of Delayed Flight Count of Each State with Comparison on Weekend and Weekday</div>
             <label class="selection"><input type="radio" name="mode" value="sumBySat" checked> Weekend</label>
             &nbsp;&nbsp;&nbsp;&nbsp;
             <label class="selection"><input type="radio" name="mode" value="sumByWed"> Weekday</label>
