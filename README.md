@@ -91,12 +91,12 @@ Our final project is on air travel as it is widely used by people around the cou
 
 | Requirement                            | Label        | Done |
 | -------------------------------------- | ------------ | ---- |
-| responsive d3 chart                    | responsive   |      |
-| interactive d3 chart                   | interactive  |      |
-| d3 chart with an animated transition   | animated     |      |
-| d3 layout                              | layout       |      |
-| d3 map                                 | map          |      |
-| Mapbox map                             | mapbox       |      |
+| responsive d3 chart                    | responsive   |   :heavy_check_mark:   |
+| interactive d3 chart                   | interactive  |   :heavy_check_mark:   |
+| d3 chart with an animated transition   | animated     |   :heavy_check_mark:   |
+| d3 layout                              | layout       |   :heavy_check_mark:   |
+| d3 map                                 | map          |   :heavy_check_mark:   |
+| Mapbox map                             | mapbox       |   :heavy_check_mark:   |
 
 ## Table of visualizations used by page
 
