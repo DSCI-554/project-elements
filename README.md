@@ -18,9 +18,9 @@ Team members:
 
 - [Project proposal](https://docs.google.com/presentation/d/1ZXqbwGM73uaxQkQZcw-Ey_fPcNkSyVv4sbGPcodtgPU/edit?usp=sharing)
 - Final presentation: [Transcript](presentation/TRANSCRIPT.md) | [slides](presentation/presentation.sozi.pdf)
-- Paper: [Overleaf read-only link](https://www.overleaf.com/read/rnkvkcwxrhjx) | [PDF](paper/paper.pdf)
+- Paper: [Overleaf read-only link](https://www.overleaf.com/read/rnkvkcwxrhjx) | [PDF](paper/Visualizing_Air_Travel_Delays.pdf)
 - [Demo link](demo/)
-- Video [Transcript](video/TRANSCRIPT.md) | [YouTube link](https://youtu.be/WRvnYwr9ol8)
+- Video [Transcript](video/TRANSCRIPT.md) |  [Video File](video/) | [YouTube link](https://youtu.be/WRvnYwr9ol8) 
 
 
 ## Project Summary
