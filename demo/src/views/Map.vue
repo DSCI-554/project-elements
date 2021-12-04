@@ -10,7 +10,7 @@
           <!-- Element to collapse -->
           <b-collapse visible id="collapse-2">
             <b-card>
-              In this page, you can check delayed flight in each state <br> 
+              On this page, you can check delayed flights in each state <br> 
               Select the date and click on the state which you want to check, <br>
               the paths of flights will be shown <br>
               Move your mouse over the path, you can check detailed delay information <br>
@@ -19,11 +19,11 @@
           </b-collapse>
           <b-collapse id="collapse-1">
             <b-card>
-              This map is built with D3 map. The legend indicates causes of delay in different colors. <br>
-              The defalut date is August 1, 2021.
+              This map is built with a D3 map. The legend indicates the causes of delay in different colors. <br>
+              The default date is August 1, 2021.
               By clicking on a state, paths of all delayed flights in this state would be shown. <br>
-              The color represents the main cause of delayed(flights may have multiple causes of delay). <br>
-              Move mouse over the path, you can see the detailed delay information. <br>
+              The color represents the main cause of delayed (flights may have multiple causes of delay). <br>
+              Move the mouse over the path, you can see the detailed delay information. <br>
               Before checking another state, you must click the shown one first. <br>
             </b-card>
           </b-collapse>
@@ -42,17 +42,17 @@
           <!-- Element to collapse -->
           <b-collapse visible id="collapse-3">
             <b-card>
-              In this page, you can check delayed flight by selecting the airport <br> 
-              Similarly pick up date and airport code <br>
-              Click on the path, details of the flight will be shown in the info box <br>
+              On this page, you can check delayed flights by selecting the airport <br> 
+              Similarly, pick up date and airport code <br>
+              Click on the path, details of the flight will be shown in the infobox <br>
               For explanation of this page, please click the <code>Explanation</code> button
             </b-card>
           </b-collapse>
           <b-collapse id="collapse-4">
             <b-card>
-              This map is built with Mapbox. The info box is where you would see the detailed information <br>
-              By clicking on a path, the information will be shown. <br>
-              The detailed information contains carrier, flight number and delayed causes <br>
+              This map is built with Mapbox. The infobox is where you would see the detailed information <br>
+              By clicking on a path, the detailed information will be shown. <br>
+              The detailed information contains carriers, flight number, and delayed causes <br>
             </b-card>
           </b-collapse>
           <b-row>
