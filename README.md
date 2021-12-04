@@ -20,7 +20,7 @@ Team members:
 - Final presentation: [Transcript](presentation/TRANSCRIPT.md) | [slides](presentation/presentation.sozi.pdf)
 - Paper: [Overleaf read-only link](https://www.overleaf.com/read/rnkvkcwxrhjx) | [PDF](paper/Visualizing_Air_Travel_Delays.pdf)
 - [Demo link](demo/)
-- Video [Transcript](video/TRANSCRIPT.md) |  [Video File](video/) | [YouTube link](https://youtu.be/WRvnYwr9ol8) 
+- Video [Transcript](video/TRANSCRIPT.md) |  [Video File](video/DSCI554-ProjectVideo.mov) | [YouTube link](https://youtu.be/WRvnYwr9ol8) 
 
 
 ## Project Summary
