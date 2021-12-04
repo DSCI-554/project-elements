@@ -111,7 +111,6 @@ Our final project is on air travel as it is widely used by people around the cou
 | Dashboard/Analysis on Carriers     |     Animated & interactive line chart  |    d3, d3-collection   |    animated,interactive            |
 | Dashboard/Analysis on States     |  Animated Treemap  |     d3           |      animated, layout, interactive             |
 | Dashboard/Analysis on Reasons     |  Interactive Donut Chart    |      d3          |      interactive    |
-|           |                   |                |                   |
 
 ## Summary table of visualization forms used
 
