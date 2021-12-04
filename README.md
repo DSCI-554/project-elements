@@ -104,8 +104,8 @@ Our final project is on air travel as it is widely used by people around the cou
 
 | Page name | Chart description | Libraries used | Requirement label |
 | --------- | ----------------- | -------------- | ----------------- |
-| Home page | main map          | d3, topojson   | map               |
-|           |                   |                |                   |
+| Map/DRES  | D3 map            | d3, topojson   | d3 map            |
+| Map/DDF   | Mapbox map        | Mapbox, geojson| Mapbox map        |
 |           |                   |                |                   |
 |           |                   |                |                   |
 |           |                   |                |                   |
@@ -117,7 +117,7 @@ Our final project is on air travel as it is widely used by people around the cou
 
 | Type             | Count |
 | ---------------- | ----- |
-| interactive maps | 3     |
+| interactive maps | 2     |
 |                  |       |
 |                  |       |
 |                  |       |
