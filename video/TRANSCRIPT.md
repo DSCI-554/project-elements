@@ -1,16 +1,21 @@
 # Project video transcript
 
-Topic:
+Topic: Visualizing air travel delays
 
-Team name:
+Team name: Elements
 
 Team members:
 
-- Tommy Trojan <tommy@usc.edu>
-- 
-- 
--
+- Aishwarya Krishnakumar kris184@usc.edu
+
+- Weidi Lou wlou@usc.edu
+
+- Zixin Zhang zzhang09@usc.edu
 
 ## Introduction (0-30s)
 
 - 
+
+## Dashboard Page (2 mins)
+
+## Maps Page (2 mins)
