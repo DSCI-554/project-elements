@@ -20,7 +20,7 @@ Team members:
 - Final presentation: [Transcript](presentation/TRANSCRIPT.md) | [slides](presentation/presentation.sozi.pdf)
 - Paper: [Overleaf read-only link](https://www.overleaf.com/read/rnkvkcwxrhjx) | [PDF](paper/paper.pdf)
 - [Demo link](demo/dist/)
-- Video [Transcript](video/TRANSCRIPT.md) | [YouTube link]()
+- Video [Transcript](video/TRANSCRIPT.md) | [YouTube link](https://youtu.be/WRvnYwr9ol8)
 
 
 ## Project Summary
