@@ -20,7 +20,7 @@ Team members:
 - Final presentation: [Transcript](presentation/TRANSCRIPT.md) | [slides](presentation/presentation.sozi.pdf)
 - Paper: [Overleaf read-only link](https://www.overleaf.com/read/rnkvkcwxrhjx) | [PDF](paper/paper.pdf)
 - [Demo link](demo/dist/)
-- Video [Transcript](video/TRANSCRIPT.md) | [YouTube link]()
+- Video [Transcript](video/TRANSCRIPT.md) | [YouTube link](https://youtu.be/WRvnYwr9ol8)
 
 
 ## Project Summary
@@ -105,10 +105,10 @@ Our final project is on air travel as it is widely used by people around the cou
 | Page name | Chart description | Libraries used | Requirement label |
 | --------- | ----------------- | -------------- | ----------------- |
 | Map/DRES  | D3 map            | d3, topojson   | d3 map            |
-| Map/DDF   | Mapbox map        | Mapbox, geojson| Mapbox map        |
-|           |                   |                |                   |
-|           |                   |                |                   |
-|           |                   |                |                   |
+| Map/DDF   | Mapbox map        | Mapbox, geojson| Mapbox map , responsive       |
+| Dashboard/Analysis on Carriers     |     Animated & interactive line chart  |    d3, d3-collection   |    animated,interactive            |
+| Dashboard/Analysis on States     |  Animated Treemap  |     d3           |      animated, layout, interactive             |
+| Dashboard/Analysis on Reasons     |  Interactive Donut Chart    |      d3          |      interactive    |
 |           |                   |                |                   |
 
 ## Summary table of visualization forms used
@@ -118,8 +118,8 @@ Our final project is on air travel as it is widely used by people around the cou
 | Type             | Count |
 | ---------------- | ----- |
 | interactive maps | 2     |
-|                  |       |
-|                  |       |
-|                  |       |
-|                  |       |
+| interactive charts |   3   |
+| responsive map |   1    |
+| animated charts   |   2    |
+|  layout chart   |     1  |
 |                  |       |
